@@ -4,8 +4,12 @@ from tkinter import *
 root = Tk()
 root.geometry("300x400")
 
-
-
+def sign_in():
+    a.delete(0,END)
+    a.insert(END,f"name : {name.get()}")
+    a.insert(END,f"family : {family.get()}")
+    a.insert(END,f"email : {email.get()}\n ")
+    a.insert(END,f"pass :{password.get()}")
 Label(root,text="Name : ").pack()
 name=Entry(root)
 name.pack()
@@ -18,7 +22,8 @@ email.pack()
 Label(root,text="password : ").pack()
 password=Entry(root , show='*')
 password.pack()
-
+sigin=Button(root,text='Sig-in',command=sign_in)
+sigin.pack()
 Label(root,text="welcome : ").pack()
 a=Listbox(root)
 a.pack()
