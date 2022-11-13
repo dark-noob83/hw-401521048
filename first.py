@@ -4,11 +4,17 @@ root.geometry("300x400")
 
 def Sum ():
     a.delete(0,END)
-    a.insert(END,int(enterNum1.get())+int(enterNum2.get()))
+    a.insert(END,float(enterNum1.get())+float(enterNum2.get()))
     
 def mine ():
     a.delete(0,END)
-    a.insert(END,int(enterNum1.get())-int(enterNum2.get()))
+    a.insert(END,float(enterNum1.get())-float(enterNum2.get()))
+def multi ():
+    a.delete(0,END)
+    a.insert(END,float(enterNum1.get())*float(enterNum2.get()))
+def devide ():
+    a.delete(0,END)
+    a.insert(END,float(enterNum1.get())/float(enterNum2.get()))
     
 
 Label(root,text='enterNum1 :').pack()
@@ -22,6 +28,10 @@ s=Button(root , text='+',command=Sum)
 s.pack()
 m=Button(root , text='-',command=mine)
 m.pack()
+zarb=Button(root , text='*',command=multi)
+zarb.pack()
+tagh=Button(root , text='/',command=devide)
+tagh.pack()
 a=Listbox(root)
 a.pack()
 
